@@ -1,0 +1,84 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:400,800" rel="stylesheet">
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    <link rel="stylesheet" href="{{root}}assets/font/foundation-icons.css">
+
+</head>
+<body>
+
+
+{{> body}}
+
+
+<script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/contentful-management@latest/dist/contentful-management.browser.min.js"></script>
+<script src="{{root}}assets/js/app.js"></script>
+
+<script>
+
+  let house = document.querySelector('.house')
+  let gallery = document.querySelector('.gallery')
+
+  const client = contentful.createClient({
+    space: '7ukza7hkus5o',
+    environment: 'master', // defaults to 'master' if not set
+    accessToken: '89a4a9379cbc16bef4681c7cb64991b3e16c61a5d0fe52b650da339ab9ab41e2',
+  })
+
+  client.getEntries({
+    content_type: 'house',
+  }).then((response) => {
+    Object.entries(response.items).forEach(([e, f], g) => {
+      let h = house.cloneNode(true)
+      h.querySelector('h4').innerText = f.fields.title
+      h.querySelector('h3').innerText = f.fields.realtorName
+      h.querySelector('ul li:first-child').innerText = f.fields.price.toString()
+      h.querySelector('ul li:last-child').innerText = f.fields.location
+        console.log(f)
+      gallery.append(h)
+      console.log(f)
+    })
+
+  }).catch(console.error)
+
+  const client2 = contentfulManagement.createClient({
+    accessToken: 'CFPAT-cb79b378c20ef03f82ac24bd9621e8ee0897205b1a24cb415e26c92e9771e728' })
+
+  let form = document.querySelector('form')
+
+  form.addEventListener('submit',(a)=>{
+    client2.getSpace('st6u2kf021gf').then((space) =>
+      space.createEntry('newsletter', {
+        fields: {
+          name: {
+            'en-US': document.querySelector('#name').valueOf()
+          },
+          phone: {
+            'en-US': document.querySelector('#phone').valueOf()
+          },
+          email: {
+            'en-US': document.querySelector('#email').valueOf()
+          }
+        }
+      })
+    ).then((entry) => console.log(entry)).catch(console.error)
+  })
+
+
+</script>
+
+
+
+</body>
+</html>
+
+
+

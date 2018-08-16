@@ -1,0 +1,627 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+@include foundation-global-styles;
+
+@include foundation-flex-grid;
+
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+@include foundation-visibility-classes;
+
+@include foundation-flex-classes;
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+  color: #0a0a0a;
+  font-weight: bolder;
+}
+
+section {
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  display: flex;
+  padding: 0;
+}
+
+#Intro {
+  height: 95vh;
+  display: flex;
+  background: url("http://placehold.it/1920x1080&text=Full Image") center center fixed;
+  background-size: cover;
+  margin: 0;
+}
+
+#Team {
+
+  margin: 100px 0;
+  display: flex;
+}
+
+#Services {
+  display: flex;
+  justify-content: flex-start;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  width: 100%;
+  background-color: #911a1d;
+  border-top: 10px solid #b6b6b6;
+}
+
+#Services h1, #Services h2, #Services h3, #Services h4, #Services h5, #Services h6 {
+  color: white !important;
+}
+
+#Services > img:first-child {
+  margin: -80px 0 40px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+#Services ul, #Services ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#Services ul {
+  flex-direction: row;
+}
+
+#Services ul li {
+  flex-direction: column;
+
+}
+
+#Services ul.services > li:first-child {
+  flex-direction: column;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+}
+
+#Services ul.services ul {
+  flex-direction: column;
+  display: flex;
+  flex: 3;
+
+}
+
+ul.services img {
+  border-radius: 0.25rem;
+}
+
+.service {
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  display: flex;
+}
+
+ul {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+ul li {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 1rem;
+  color: #efefef;
+}
+
+div {
+  flex-direction: row;
+  justify-content: space-between;
+  justify-self: flex-start;
+  display: flex;
+}
+
+section .top_menu {
+  width: 100%;
+  margin: 0;
+}
+
+a {
+  margin: 1rem;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  z-index: 11;
+}
+
+.social {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 90vh;
+  flex-direction: column;
+}
+
+.social li {
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+.social li a {
+  margin: 0;
+  padding: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.45);
+  color: white;
+
+}
+
+.social li:not(:first-child) {
+  font-size: 2rem;
+}
+
+.social li.follow {
+  width: 75px;
+  transform: rotateZ(-90deg);
+  margin-bottom: 4vh;
+}
+
+.trailer {
+  justify-self: flex-end;
+  display: flex;
+  align-items: center;
+
+}
+
+.col {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+video {
+  width: 80vw;
+  background: #ccc;
+  margin: 0;
+  padding: 0;
+  top: -5vh;
+  position: relative;
+}
+
+.filter {
+  flex-direction: column;
+}
+
+.gallery {
+  flex-direction: row;
+  justify-items: flex-start;
+  width: 66%;
+}
+
+.gallery li ul {
+  flex-direction: column;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.gallery li {
+  justify-items: auto;
+  margin: 0;
+}
+
+.gallery h3, .gallery h4, .gallery li {
+  color: black;
+}
+
+.gallery ul.house {
+  flex-flow: row;
+  justify-content: end;
+  align-items: left;
+  margin: 2vh 0 0 0;
+  padding: 0;
+  text-align: left;
+
+}
+
+.gallery ul.house li {
+  margin: 0 1vw 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.trailer, .gallery ul.house li {
+  font-family: "foundation-icons", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+
+}
+
+.trailer:before {
+  content: "\f196";
+  margin-right: 0.5vw;
+}
+
+.gallery ul.house li:before {
+  content: "\f10b";
+  margin-right: 0.2vw;
+}
+
+html, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  flex-direction: column;
+  color: #0a0a0a;
+
+}
+
+
+h1, h2, h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+}
+
+h4, h5, h6 {
+  font-family: "Open Sans", sans-serif;
+}
+
+p, blockquote, a {
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+}
+
+#fullpage {
+  display: flex;
+  background: gray;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 1rem;
+  text-align: left;
+
+}
+
+h3 {
+  font-size: 0.75rem;
+  text-align: left;
+
+}
+
+#example {
+  background: blue;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+ul.service li {
+  min-height: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+#Team h5, #Homes h5, #Services h5 {
+
+  font-size: 1.2rem;
+  font-weight: lighter;
+  color: maroon;
+}
+
+#Team h2 {
+  margin-top: 12px;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+#Team p {
+  width: 650px;
+  text-align: center;
+}
+
+#Team .people h5, #Team .people h3 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#Team .people h3 {
+  margin-top: 1rem;
+}
+
+#Team .people h5 {
+  font-size: 0.9rem;
+  font-weight: lighter;
+}
+
+ul.services span {
+  margin: 0;
+  padding: 0;
+  font-size: 3rem;
+}
+
+.services h4 {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+a.trailer span {
+  font-weight: bolder;
+
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin: 1rem 0
+}
+
+.services h6 {
+  font-size: 1.2rem;
+
+}
+
+.services h5 {
+  text-transform: uppercase;
+  margin-top: 1vh;
+  font-size: 1rem;
+  color: white;
+}
+
+.service li {
+  //font-size: 0.9rem;
+}
+
+#Homes {
+  flex-direction: column;
+  display: flex;
+  padding-bottom: 4rem;
+  position: relative;
+
+}
+
+#Homes .gallery {
+  display: flex;
+  //margin: 0 0 10vh 0;
+  padding: 0;
+
+  flex-flow: wrap;
+}
+
+#Homes .gallery {
+  //margin-bottom: 10rem;
+}
+
+#Homes .gallery > li:first-child {
+  //display: none;
+}
+
+#Homes .gallery img {
+  width: 292px;
+  height: 170px;
+}
+
+#Homes > h5 {
+  font-size: 1.2rem;
+  margin-top: 5vh;
+  color: maroon;
+}
+
+#Homes > h3 {
+  font-size: 2.5rem;
+  margin-bottom: 2vh;
+}
+
+#Homes p {
+  text-align: center;
+}
+
+#Logos {
+  width: 100%;
+  height: 20vh;
+  background: #8a8a8a;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+#Logos ul, #Logos li {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 60%;
+
+}
+
+#Mailing {
+  height: 25vh;
+  display: flex;
+  background: #911a1d;
+  margin: 0;
+}
+
+#Mailing ul {
+  flex-flow: row;
+  display: flex;
+  width: 50%;
+  flex: 1;
+}
+
+#Mailing ul li {
+  width: 75%;
+  display: flex;
+}
+
+#Mailing ul li:first-child {
+  width: 25%;
+}
+
+#Mailing ul li:last-child {
+  flex-direction: row;
+  display: flex;
+}
+
+#Mailing h2 {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+
+#Mailing p {
+  font-size: 0.8rem;
+}
+
+#Mailing button {
+  background: white;
+  color: black;
+  width: 50%;
+  border-radius: 0.1rem;
+  height: 40px;
+  align-self: flex-end;
+}
+
+#Menu {
+  display: flex;
+  width: 100%;
+  background: #efefef;
+  height: 0;
+  transition: height 50ms linear;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+#Menu.on {
+  height: 55px;
+
+}
+
+#Mailing input {
+  background: #460f12;
+  border: 0;
+  border-top-left-radius: 0.1rem;
+  border-bottom-left-radius: 0.1rem;
+  height: 2.5375rem;
+  color: white;
+
+}
+
+#Mailing label {
+  width: 100%;
+  padding-right: 10px;
+  color: white;
+
+}
+
+#Mailing h2 {
+  color: white;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  margin: 0;
+}
+
+.logo img {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+}
+
+.categories {
+  transform: rotateZ(-90deg);
+
+}
+
+.category-container {
+  position: absolute;
+  height: 100%;
+  left: 0;
+}
+
+.categories li {
+  color: maroon;
+}
+
+#Movie {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+
+  justify-content: center;
+  align-items: center;
+  display: none;
+
+}
+
+#Movie.on {
+  display: flex;
+}
+
+#Movie video {
+  display: flex;
+  background: blue;
+  height: 40vh;
+  width: 60vw;
+}
+
+#Menu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:0;
+  padding:0;
+}
+
+#Menu ul li {
+  color: black;
+}
